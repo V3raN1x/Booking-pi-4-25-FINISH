@@ -1,5 +1,5 @@
 from django.urls import path, include
-from rest_framework.routers import SimpleRouter
+from rest_framework.routers import DefaultRouter
 from .views import (CityListAPIView, CityDetailAPIView,
                     ServiceViewSet, HotelImageViewSet,
                     RoomListAPIView, RoomDetailAPIView,
@@ -11,7 +11,7 @@ from .views import (CityListAPIView, CityDetailAPIView,
                     LoginView, LogoutView
                     )
 
-router = SimpleRouter()
+router = DefaultRouter()
 router.register(r'service', ServiceViewSet),
 router.register(r'hotelImage', HotelImageViewSet),
 router.register(r'roomImage', RoomImageViewSet),
